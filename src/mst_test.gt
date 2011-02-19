@@ -1,0 +1,19 @@
+info {
+}
+
+vertex "A" at (249,81)
+vertex "B" at (124,162)
+vertex "C" at (248,162)
+vertex "D" at (372,162)
+vertex "E" at (248,243)
+vertex "F" at (373,243)
+
+edge "B" -- "C" with weight 15
+edge "C" -- "D" with weight 5
+edge "E" -- "F" with weight 2
+edge "A" -- "C" with weight 8
+edge "C" -- "E" with weight 3
+edge "D" -- "F" with weight 5
+edge "A" -- "B" with weight 13
+edge "A" -- "D"
+edge "D" -- "E" with weight 4

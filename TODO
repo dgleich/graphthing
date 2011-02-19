@@ -1,0 +1,51 @@
+This is roughly in order of decreasing priority. If you have a request, send
+it to me at <dsymonds@gmail.com>.
+
+	* More output formats:
+		- EPS (for LaTeX insertion)
+		- GraphBase
+		- xfig
+		- JPEG/PNG, etc.
+	* Editing of adjacency matrix
+	* General appearance settings
+		- fonts (size, face, etc.)
+		- background colour
+	* Moving entire graph around page (e.g. w/ Ctrl key)
+	* Proper installer for Windows
+		- NSIS (http://nsis.sf.net)?
+	* Mac port:
+		- Old version of bison!
+		  (Makes *.tab.cc.h instead of *.tab.hh)
+	* Pretty polynomial/matrix displays
+	* Accelerators for various things
+		- switching modes (space bar: but how to toggle toolbar btns?)
+	* "Factorised" forms for chromatic polynomials
+	* Help system
+	* Quick overview of common statistics
+	* Non-integer and negative edge weights
+	* Graph layout algorithms
+		- internalize some?
+			+ spring embedding
+		- call out to tools like dot/neato
+		- simple zoom-to-fit
+	* Digraphs
+		- double arcs: (two directed edges between vertex pair)
+			+ fix cycling with right-click
+			+ fix text attachment positioning
+			+ fix spline sizing
+		- More network flow stuff
+		- Q: in a digraph with an undirected edge, can it be traversed
+			twice in an Eulerian cycle?
+	* Combinatorial stuff:
+		- automorphism group (integration with 'nauty'?)
+		- Cycle index polynomial
+	* Have undo dialog for multiple simultaneous undos, with descriptions
+	* Multigraphs
+		- curved edges (4-point bezier curves?)
+		- loops
+		- need to do a complete code audit!
+	* More comprehensive testing
+	* Poset stuff:
+		- determine if a Hasse diagram
+		- spit out minimal ordering
+	* Travelling salesman problem (and other standard NP-hard problems)

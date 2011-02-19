@@ -1,0 +1,27 @@
+info {
+	comment = "Kocay & Kreher (2005), p183"
+	creator = "GraphThing 1.1"
+}
+
+vertex "v1" at (288,62)
+vertex "v5" at (409,184)
+vertex "v3" at (288,306)
+vertex "s" at (165,185)
+vertex "v4" at (378,62)
+vertex "t" at (499,184)
+vertex "v6" at (378,306)
+vertex "v2" at (255,185)
+
+edge "v1" -> "v5" with weight 4
+edge "v3" -> "v5" with weight 5
+edge "s" -> "v3" with weight 9
+edge "s" -> "v1" with weight 7
+edge "v1" -> "v4" with weight 2
+edge "v4" -> "t" with weight 6
+edge "v6" -> "t" with weight 6
+edge "v2" -> "v6"
+edge "v2" -> "v4" with weight 3
+edge "s" -> "v2"
+edge "v5" -> "t" with weight 6
+edge "v3" -> "v6" with weight 5
+edge "v2" -> "v5" with weight 4

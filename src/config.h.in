@@ -1,0 +1,23 @@
+//
+//	config.h
+//
+
+#ifndef __CONFIG_H__
+#define __CONFIG_H__
+
+// GraphThing version information
+#define GT_VERSION		""
+
+// was --with-dev passed to configure script?
+#undef GT_WITH_DEV
+
+// NLS stuff
+#undef ENABLE_NLS
+#undef LANG_DIALOG_IS_DISABLED
+
+// System type
+#undef USING_LINUX
+#undef USING_FREEBSD
+#undef USING_OSX
+
+#endif	// __CONFIG_H__

@@ -1,0 +1,40 @@
+info {
+	comment = "A triangle-free uniquely 3-colourable graph"
+	creator = "GraphThing 1.1"
+}
+
+vertex "A" at (149,35)
+vertex "B" at (200,36)
+vertex "C" at (246,87)
+vertex "D" at (245,143)
+vertex "E" at (198,191)
+vertex "F" at (145,191)
+vertex "H" at (101,86)
+vertex "J" at (21,98)
+vertex "K" at (334,110)
+vertex "L" at (142,265)
+vertex "M" at (205,264)
+vertex "G" at (102,138)
+
+edge "A" -- "B"
+edge "B" -- "C"
+edge "C" -- "D"
+edge "D" -- "E"
+edge "E" -- "F"
+edge "H" -- "A"
+edge "G" -- "F"
+edge "G" -- "H"
+edge "A" -- "J"
+edge "J" -- "G"
+edge "G" -- "L"
+edge "L" -- "E"
+edge "J" -- "M"
+edge "L" -- "K"
+edge "M" -- "D"
+edge "M" -- "F"
+edge "B" -- "K"
+edge "K" -- "D"
+edge "H" -- "D"
+edge "G" -- "C"
+edge "B" -- "F"
+edge "E" -- "A"

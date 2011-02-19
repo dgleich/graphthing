@@ -1,0 +1,26 @@
+info {
+}
+
+vertex "A" at (53,75)
+vertex "Z" at (419,77)
+vertex "D" at (238,137)
+vertex "C" at (168,137)
+vertex "E" at (308,137)
+vertex "B" at (95,192)
+vertex "F" at (379,194)
+vertex "G" at (238,243)
+
+edge "Z" -- "A" with weight 13
+edge "C" -- "A" with weight 2
+edge "B" -- "A" with weight 2
+edge "F" -- "Z" with weight 7
+edge "E" -- "Z" with weight 3
+edge "F" -- "D"
+edge "G" -- "D" with weight 5
+edge "B" -- "D" with weight 8
+edge "C" -- "D" with weight 7
+edge "B" -- "G"
+edge "G" -- "F" with weight 3
+edge "F" -- "E" with weight 3
+edge "C" -- "B"
+edge "D" -- "E" with weight 2

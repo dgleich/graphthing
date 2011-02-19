@@ -1,0 +1,189 @@
+# script for autoconf
+
+AC_INIT([GraphThing],[1.3.2])
+AC_PREREQ(2.53)
+AC_CONFIG_SRCDIR(src/graph.h)
+AC_CONFIG_HEADER(src/config.h)
+
+AC_DEFINE_UNQUOTED(GT_VERSION, "$PACKAGE_VERSION")
+AC_SUBST(GT_VERSION)
+
+# Check out C++ compiler
+AC_PROG_CC
+AC_PROG_CXX
+AC_CXX_NAMESPACES
+AC_C_PROTOTYPES
+# TODO: Check for PROTOTYPES being defined
+AC_C_STRINGIZE
+if test $ac_cv_c_stringize != yes; then
+	AC_MSG_ERROR([no ANSI stringizing operator])
+fi
+AC_CXX_BOOL
+AC_CXX_EXCEPTIONS
+AC_CXX_HAVE_SSTREAM
+AC_CXX_HAVE_STD
+AC_CXX_HAVE_STL
+AC_CXX_MEMBER_CONSTANTS
+
+# Other programs
+AC_PROG_YACC
+if test "$YACC" != "bison -y"; then
+	AC_MSG_ERROR([I'd much prefer to use GNU bison])
+fi
+AC_PROG_LEX
+if test "$LEX" != "flex"; then
+	AC_MSG_ERROR([I'd much prefer to use GNU flex])
+fi
+AC_PROG_INSTALL
+AC_PROG_MAKE_SET
+AC_PROG_LN_S
+
+
+
+AC_PATH_PROG(unamepath, uname)
+if test "x$unamepath" = "x"; then
+	system="unknown"
+else
+	AC_MSG_CHECKING(system type)
+	system=`$unamepath -s`
+	AC_MSG_RESULT($system)
+	if test "$system" = "Linux"; then
+		AC_DEFINE(USING_LINUX)
+	fi
+	if test "$system" = "FreeBSD"; then
+		AC_DEFINE(USING_FREEBSD)
+	fi
+	if test "$system" = "Darwin"; then
+		AC_DEFINE(USING_OSX)
+	fi
+fi
+
+
+# Check for needed headers
+AC_CHECK_HEADERS([math.h stdio.h stdlib.h string.h time.h unistd.h],
+		 [],
+		 [exit])
+
+# Check for maths library
+AC_CHECK_LIB(m, atan2, , AC_MSG_ERROR([Missing maths library (-lm)]))
+
+# Check for GNU make
+CHECK_GNU_MAKE
+if test "x$_cv_gnu_make_command" = "x"; then
+	echo "#############################################"
+	echo "# Sorry, GNU Make is required to build.     #"
+	echo "#############################################"
+	exit 1
+fi
+
+# Check for wxWidgets
+AM_PATH_WXWIDGETS(2.6.1, , exit)
+
+# Using '--disable-nls' removes the compilation of translation stuff
+turn_on_nls="yes"
+AC_ARG_ENABLE(nls,
+	AS_HELP_STRING([--disable-nls], [Do not use Native Language Support]),
+	[ turn_on_nls="$enableval" ],
+	[ turn_on_nls="yes" ])
+if test "$turn_on_nls" = "yes"; then
+	AC_DEFINE(ENABLE_NLS)
+	NLS_OBJS="lang.o"
+	AC_SUBST(NLS_OBJS)
+	NLS_PARSERS="lang."
+	AC_SUBST(NLS_PARSERS)
+fi
+
+# Using '--enable-langdialog' turns on the LangDialog
+use_langdialog="no"
+AC_ARG_ENABLE(langdialog,
+	AS_HELP_STRING([--enable-langdialog], [Use the language selection dialog (needs NLS)]),
+	[ use_langdialog="$enableval" ],
+	[ use_langdialog="no" ])
+if test "$use_langdialog" = "yes"; then
+	if test "$turn_on_nls" = "yes"; then
+		NLS_OBJS="$NLS_OBJS langdialog.o"
+		AC_SUBST(NLS_OBJS)
+	else
+		echo "###"
+		echo "### ERROR: The language selection dialog (LangDialog)"
+		echo "###        requires NLS. Please don't use --disable-nls."
+		echo "###"
+		exit 1
+	fi
+else
+	AC_DEFINE(LANG_DIALOG_IS_DISABLED)
+fi
+
+# Using '--with-dev' changes compile-time flags to be more strict
+turn_on_dev="no"
+AC_ARG_WITH(dev, [  --with-dev              Enable developer flags],
+[
+	turn_on_dev="yes"
+	EXTRA_CFLAGS='-Wall \
+	 -Wpointer-arith -Werror -ggdb';
+	AC_SUBST(EXTRA_CFLAGS)
+
+	EXTRA_PROGS='unit_test chrom'
+	AC_SUBST(EXTRA_PROGS)
+
+	AC_DEFINE(GT_WITH_DEV)
+])
+
+# Using '--with-prof' enables profiling
+turn_on_prof="no"
+AC_ARG_WITH(prof, [  --with-prof             Enable profiling],
+[
+	turn_on_prof="yes"
+	EXTRA_CFLAGS="$EXTRA_CFLAGS -g -pg"
+	EXTRA_LDFLAGS="-g -pg"
+	AC_SUBST(EXTRA_CFLAGS)
+	AC_SUBST(EXTRA_LDFLAGS)
+])
+
+# Write stuff to Makefiles
+AC_CONFIG_FILES([GNUmakefile
+	src/GNUmakefile
+	graphthing.1])
+AC_OUTPUT
+#ln -sf src/config.h config.h
+
+# Tell them about the options they have selected
+echo "###"
+if test "$turn_on_nls" = "yes"; then
+	echo "### * Native Language Support enabled."
+	if test "$use_langdialog" = "yes"; then
+		echo "###     (with LangDialog enabled)."
+	else
+		echo "###     (but no LangDialog)."
+	fi
+else
+	echo "### * Native Language Support disabled."
+fi
+echo "###"
+
+# If they've turned on Developer Flags, give a warning
+if test "$turn_on_dev" = "yes"; then
+	echo "###"
+	echo "### WARNING: You have enabled Developer flags. Unless you"
+	echo "###          are a developer, you are strongly advised to"
+	echo "###          leave developer flags turned off, or you may"
+	echo "###          have problems compiling GraphThing."
+	echo "###"
+fi
+
+# If they've turned on Profiling, give a warning
+if test "$turn_on_prof" = "yes"; then
+	echo "###"
+	echo "### WARNING: You have enabled Profiling. Unless you are a"
+	echo "###          developer, you are strongly advised to leave"
+	echo "###          profiling turned off, or you may have problems"
+	echo "###          compiling or running GraphThing."
+	echo "###"
+fi	
+
+
+echo "##################################################"
+echo "   GraphThing is now configured. Simply type...  "
+echo "           $_cv_gnu_make_command                 "
+echo "   ... and GraphThing will be compiled.          "
+echo "##################################################"

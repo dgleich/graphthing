@@ -1,0 +1,60 @@
+aboutbox.o: aboutbox.cc \
+  aboutbox.h config.h lang.h \
+  logo_sc.xpm
+canvas.o: canvas.cc \
+  canvas.h edge.h graph.h matrix.h gui.h \
+  undo.h lang.h config.h \
+  paramdialog.h \
+  vertex.h \
+ 
+edge.o: edge.cc edge.h vertex.h \
+ 
+exporter.o: exporter.cc \
+  config.h edge.h exporter.h graph.h \
+  matrix.h vertex.h
+factory.o: factory.cc \
+  edge.h factory.h graph.h matrix.h \
+  vertex.h
+fancyfileselection.o: fancyfileselection.cc \
+  fancyfileselection.h lang.h \
+  config.h
+graph.o: graph.cc \
+  config.h edge.h graph.h matrix.h \
+  vertex.h
+graph2.o: graph2.cc \
+  edge.h graph.h matrix.h main.h math.h \
+  polynomial.h vertex.h
+gui.o: gui.cc \
+  canvas.h \
+  config.h edge.h factory.h \
+  graph.h matrix.h gui.h undo.h lang.h vertex.h edge_mode.xpm \
+  vertex_mode.xpm logo.xpm
+gui_cb.o: gui_cb.cc \
+  aboutbox.h canvas.h \
+  config.h edge.h exporter.h \
+  factory.h fancyfileselection.h \
+  graph.h matrix.h gui.h \
+  undo.h lang.h matrixdialog.h \
+  paramdialog.h polynomial.h \
+  vertex.h
+main.o: main.cc \
+  config.h gui.h \
+  matrix.h undo.h lang.h
+math.o: math.cc math.h
+matrix.o: matrix.cc matrix.h
+matrixdialog.o: matrixdialog.cc \
+  graph.h matrix.h lang.h \
+  config.h matrixdialog.h vertex.h
+paramdialog.o: paramdialog.cc \
+  edge.h lang.h config.h \
+  paramdialog.h vertex.h
+polynomial.o: polynomial.cc math.h polynomial.h \
+ 
+undo.o: undo.cc \
+  graph.h matrix.h undo.h
+vertex.o: vertex.cc \
+  edge.h vertex.h
+lang.o: lang.cc \
+  lang.h config.h phrases.h
+unit_test.o: unit_test.cc edge.h factory.h \
+  graph.h matrix.h polynomial.h vertex.h

@@ -1,0 +1,39 @@
+info {
+}
+
+vertex "0" at (249,54)
+vertex "1" at (295,65)
+vertex "2" at (333,95)
+vertex "3" at (354,138)
+vertex "4" at (354,187)
+vertex "5" at (333,230)
+vertex "6" at (295,260)
+vertex "7" at (249,270)
+vertex "8" at (202,260)
+vertex "9" at (164,230)
+vertex "10" at (143,187)
+vertex "11" at (143,138)
+vertex "12" at (164,95)
+vertex "13" at (202,65)
+
+edge "0" -- "1"
+edge "1" -- "2"
+edge "2" -- "3"
+edge "3" -- "4"
+edge "4" -- "5"
+edge "5" -- "6"
+edge "6" -- "7"
+edge "7" -- "8"
+edge "8" -- "9"
+edge "9" -- "10"
+edge "10" -- "11"
+edge "11" -- "12"
+edge "12" -- "13"
+edge "13" -- "0"
+edge "0" -- "5"
+edge "2" -- "7"
+edge "4" -- "9"
+edge "6" -- "11"
+edge "8" -- "13"
+edge "10" -- "1"
+edge "12" -- "3"

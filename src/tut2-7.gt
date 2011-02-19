@@ -1,0 +1,35 @@
+info {
+}
+
+vertex "A" at (12,147)
+vertex "B" at (76,146)
+vertex "C" at (132,90)
+vertex "D" at (130,146)
+vertex "E" at (130,205)
+vertex "F" at (199,144)
+vertex "G" at (259,144)
+vertex "H" at (320,71)
+vertex "I" at (404,71)
+vertex "J" at (404,142)
+vertex "K" at (402,214)
+vertex "L" at (318,214)
+
+edge "A" -- "C"
+edge "A" -- "E"
+edge "B" -- "C"
+edge "B" -- "E"
+edge "C" -- "D"
+edge "C" -- "F"
+edge "D" -- "E"
+edge "E" -- "F"
+edge "F" -- "G"
+edge "G" -- "H"
+edge "G" -- "J"
+edge "G" -- "L"
+edge "H" -- "I"
+edge "H" -- "J"
+edge "H" -- "L"
+edge "I" -- "J"
+edge "J" -- "K"
+edge "J" -- "L"
+edge "K" -- "L"

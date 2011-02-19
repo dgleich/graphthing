@@ -1,0 +1,142 @@
+---------------------------------------------------------------
+This is the feature-oriented ChangeLog for GraphThing.
+
+Key:
+	+ something added
+	* something changed
+	- something removed
+---------------------------------------------------------------
+
+Version 1.3.2 (22 December 2006)
+	+ Chinese (Simplified) translation
+
+Version 1.3.1 (19 September 2006)
+	* Build process fixes
+	* 64-bit fixes
+	+ New manpage (very basic)
+
+Version 1.3 (6 September 2006)
+	* Fixed up loading graphs from the command-line
+	* Adjacency matrix reflects edge weights
+	+ New icons (thanks to Christian Brown <cpbrown@gmail.com>)
+
+Version 1.2.1 (12 November 2005)
+	* Output bug fixes
+
+Version 1.2 (28 October 2005)
+	* Major multi-lingual support fixes
+	+ French translation
+	* Updated Catalan, Italian, Romanian and Spanish translations
+
+Version 1.1 (28 July 2005)
+	+ Network flow support and algorithms
+	+ File format update (better use of "info" block)
+	+ Experimental curved edges
+	* Updated German translation
+	* Quieter, improved build process (requiring GNU make)
+	* Made parsers more permissive
+	* Several minor bug fixes
+
+Version 1.0 (3 July 2005)
+	+ Spiffy new wxWidgets-based GUI
+	+ Chromatic index is now justified by demonstration, where possible
+	* Updated translations
+	* Fixed some GUI inconsistencies
+
+Version 0.9.5 (22 February 2004)
+	+ Romanian translation
+	+ Right-clicking on an edge cycles through its orientations
+	* Made more actions undoable (clearing, loading and prefabs)
+	+ Exporter for Maple
+	+ Minimum Spanning Tree (thanks to Ion Savin <comp_@gmx.net>)
+
+Version 0.9.4 (15 January 2004)
+	* Massive chromatic number optimisations for simple graphs
+	* Unlimited undo
+	+ Edge orienting from inside GUI
+	+ Exporters for GraphML and Graphviz formats
+	- Removed redundant pop-up menu
+
+Version 0.9.3 (18 December 2003)
+	+ Added full simple digraph support, including:
+		digraph edge drawing and printing, with weights
+	+ Eulerian tours are constructed and demonstrated
+	+ Chromatic numbers are justified by demonstration, where possible
+	* Large optimisations for colouring-related computations
+	* Fixed matrix exponentiation for the A^0 case
+	* gcc 3.2 fixes
+
+Version 0.9.2 (24 August 2003)
+	+ Italian translation
+	* FreeBSD fix
+	* Redraw speedup (thanks to Andrew Sampson <ads4260 at rit.edu>)
+	+ @prefix@/bin/graphthing is now a symlink to 'gt' in that directory
+	* Added translation consistency checking
+
+Version 0.9.1 (5 March 2003)
+	+ Chromatic Index computation
+	+ Line Graph
+	+ More prefabs (Gear, Hanoi)
+	* Several bug fixes for RedHat 7.3/gcc 2.96
+
+Version 0.9 (18 February 2003)
+	* Split vertex/edge editing mode
+	* Fixed vertex renaming bug
+	+ Scrollable window for bigger graphs
+	+ Graph complements
+	+ Induced subgraphs
+	+ Swedish Chef translation
+
+Version 0.8.1 (23 January 2003)
+	* Major chromatic polynomial bug fixed
+	* Completed fixes for gcc 3 and RedHat 8
+	+ More testing
+
+Version 0.8 (15 January 2003)
+	+ New progress meter for long operations
+	+ Adjacency matrix exponents
+	+ Translation definition language much more powerful
+	* More fixes for gcc 3
+	* Several optimisations
+
+Version 0.7.3: (31 December 2002)
+	* More fixes for gcc 3 and RedHat 8
+	+ Catalan translation
+
+Version 0.7.2: (29 December 2002)
+	* Replaced gettext usage with own translation facilities
+	+ Spanish translation
+
+Version 0.7.1: (26 October 2002)
+	+ German translation
+	* Fixes for FreeBSD and gcc 3
+
+Version 0.7: (3 April 2002)
+	* Complete rewrite in C++
+	+ Platonic prefabs
+
+Version 0.6: (6 October 2001)
+	+ Vertex and edge properties made editable
+
+Version 0.5: (7 August 2001)
+	+ Diameter and radius computation
+	* Printing started
+	+ Some tooltips
+
+Version 0.4: (4 August 2001)
+	* Fixed nasty chromatic polynomial bug (base case problem)
+
+Version 0.3: (30 July 2001)
+	* File format changed
+	* Prefab dialogs tweaked
+	+ More prefabs (Complete Bipartite)
+
+Version 0.2: (28 July 2001)
+	+ Connect-and-select interface (Ctrl+Shift)
+	+ More prefabs (Ladder, Petersen)
+	* Massive acceleration for chromatic polynomials
+	* Adjusted naming of new vertices
+	* Many optimisations
+
+Version 0.1: (22 July 2001)
+	* Initial release

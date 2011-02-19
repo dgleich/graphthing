@@ -1,0 +1,1557 @@
+#	vim:set encoding=utf-8 fileencoding=utf-8 ts=8:
+# GraphThing phrase translation file
+
+# Format:
+#  * Each phrase is a quoted string (multiple quoted strings are
+#	concatenated)
+#  * If a quote-mark is desired in a phrase, backslash it; if you want
+#	a backslash, use a double-backslash (\\)
+#  * A phrase-block begins with the English phrase, an '=', a '{', a
+#	series of translations, and a '}'. A block always finishes with ';'
+#  * Each translation is a language name, an '=', and a phrase
+
+# Notes:
+#  * Not all languages have to have an entry in a phrase-block;
+#	if a translation is missing, it will default to English
+#  * Please be very careful to preserve punctuation
+#  * Be *extremely* careful to use the conversion specifiers correctly;
+#	the order of specifiers MUST be identical in a phrase-block
+
+# Languages presently accepted:
+#	Catalan (ca), Danish (dk), Dutch (nl), Esperanto (eo), English (en),
+#	Finnish (fi), French (fr), German (de), Greek (el), Italian (it),
+#	Norwegian (no), Polish (pl), Portuguese (pt), Romanian (ro),
+#	Spanish (es), Swedish (sv), SwedishChef (sv_CK)
+
+#------------------------- Meta -------------------------#
+"Version" = {
+	Catalan = "Versió"
+	ChineseSimp = "版本"
+	French = "Version"
+	German = "Version"
+	Italian = "Versione"
+	Romanian = "Versiunea"
+	Spanish = "Versión"
+	SwedishChef = "Ferseeun"
+};
+
+# This one's a bit special - it should be the name of the language, as written
+# in that language
+"English" = {
+	Catalan = "Català"
+	ChineseSimp = "简体中文"
+	French = "Français"
+	German = "Deutsch"
+	Italian = "Italiano"
+	Romanian = "Românã"
+	Spanish = "Español"
+	SwedishChef = "Svedeesh Cheff"
+};
+
+#------------------------- General -------------------------#
+# (stuff in this section aren't actually strings that need
+#  translation. They are mostly commonly used words)
+
+"About" = "&About" subst "&" / "";
+"All" = {
+	Catalan = "Ambdós"
+	ChineseSimp = "全部"
+	French = "Tous"
+	German = "Alle"
+	Italian = "Tutto"
+	Romanian = "Tot"
+	Spanish = "Ambos"
+	SwedishChef = "Ell"
+};
+"&Edges" = {
+	Catalan = "&Arestes"
+	ChineseSimp = "边(&E)"
+	French = "&Sommets"
+	German = "&Kanten"
+	Italian = "&Archi"
+	Romanian = "&Muchii"
+	Spanish = "&Aristas"
+	SwedishChef = "&Idges"
+};
+"&Vertices" = {
+	Catalan = "&Vèrtexs"
+	ChineseSimp = "顶点(&V)"
+	French = "&Arêtes"
+	German = "&Vertizen"
+	Italian = "&Vertici"
+	Romanian = "&Vârfuri"
+	Spanish = "&Vértices"
+	SwedishChef = "&Ferteeces"
+};
+
+#------------------------- Menus -------------------------#
+### File
+"&File" = {
+	Catalan = "&Fitxer"
+	ChineseSimp = "文件(&F)"
+	French = "&Fichier"
+	German = "&Datei"
+	Italian = "&File"
+	Romanian = "&Fiºier"
+	Spanish = "&Fichero"
+	SwedishChef = "&Feele-a"
+};
+"&Load\tCtrl-O" = "&Load" + "\tCtrl-O";
+"\tCtrl-O" = literal;
+"&Load" = {
+	Catalan = "&Obrir"
+	ChineseSimp = "打开(&L)"
+	French = "&Ouvrir"
+	German = "&Öffnen"
+	Italian = "&Carica"
+	Romanian = "&Încãrcare"
+	Spanish = "&Abrir"
+	SwedishChef = "&Lued"
+};
+"&Save\tCtrl-S" = "&Save" + "\tCtrl-S";
+"\tCtrl-S" = literal;
+"&Save" = {
+	Catalan = "&Desar"
+	ChineseSimp = "保存(&S)"
+	French = "&Sauver"
+	German = "&Speichern"
+	Italian = "&Salva"
+	Romanian = "&Salvare"
+	Spanish = "&Guardar"
+	SwedishChef = "&Sefe-a"
+};
+#"&Print\tCtrl-P" = "&Print" + "\tCtrl-P";
+#"\tCtrl-P" = literal;
+#"&Print" = {
+#	Catalan = "Im&primir"
+#	ChineseSimp = "打印(&P)"
+#	French = "Im&primer"
+#	German = "&Drucken"
+#	Italian = "Stam&pa"
+#	Romanian = "&Tipãrire"
+#	Spanish = "Im&primir"
+#	SwedishChef = "&Preent"
+#};
+"E&xit\tCtrl-Q" = "E&xit" + "\tCtrl-Q";
+"\tCtrl-Q" = literal;
+"E&xit" = {
+	Catalan = "&Sortir"
+	ChineseSimp = "退出(&x)"
+	French = "&Quitter"
+	German = "B&eenden"
+	Italian = "&Esci"
+	Romanian = "I&eºire"
+	Spanish = "&Salir"
+	SwedishChef = "I&xeet"
+};
+
+### Edit
+"&Edit" = {
+	Catalan = "&Editar"
+	ChineseSimp = "编辑(&E)"
+	French = "&Éditer"
+	German = "&Editieren"
+	Italian = "&Modifica"
+	Romanian = "&Editare"
+	Spanish = "&Editar"
+	SwedishChef = "&Ideet"
+};
+"&Undo\tCtrl-Z" = "&Undo" + "\tCtrl-Z";
+"\tCtrl-Z" = literal;
+"&Undo" = {
+	Catalan = "&Desfer"
+	ChineseSimp = "撤销(&U)"
+	French = "&Annuler"
+	German = "&Rückgängig"
+	Italian = "&Annulla"
+	Romanian = "&Anuleazã"
+	Spanish = "&Deshacer"
+	SwedishChef = "&Undu"
+};
+"Select &All\tCtrl-A" = "Select &All" + "\tCtrl-A";
+"\tCtrl-A" = literal;
+"Select &All" = {
+	Catalan = "Selecciona &Tot"
+	ChineseSimp = "全选(&A)"
+	French = "Tout &sélectionner"
+	German = "&Alles auswählen"
+	Italian = "Seleziona &Tutto"
+	Romanian = "&Selecteazã tot"
+	Spanish = "Selecciona &Todo"
+	SwedishChef = "Select &Ell"
+};
+"Select &None" = {
+	Catalan = "Selecciona &Cap"
+	ChineseSimp = "取消选择(&N)"
+	French = "Tout &désélectionner"
+	German = "&Nichts auswählen"
+	Italian = "&Nessuna Selezione"
+	Romanian = "&Deselecteazã tot"
+	Spanish = "Selecciona &Ninguno"
+	SwedishChef = "Select &Noon"
+};
+"&Invert Selection" = {
+	Catalan = "&Invertir selecció"
+	ChineseSimp = "反向选择(&I)"
+	French = "&Inverser la sélection"
+	German = "Auswahl &Invertieren"
+	Italian = "&Inverti Selezione"
+	Romanian = "&Inverseazã selecþia"
+	Spanish = "&Invertir selección"
+	SwedishChef = "&Infert Selecshun"
+};
+"Invert Selection" = "&Invert Selection" subst "&" / "";
+"Invert Selection (&Vertices)" = "Invert Selection" + " (" + "&Vertices" + ")";
+"Invert Selection (&Edges)" = "Invert Selection" + " (" + "&Edges" + ")";
+"&Invert Selection (All)" = "&Invert Selection" + " (" + "All" + ")";
+
+
+### View
+"&View" = {
+	Catalan = "&Veure"
+	ChineseSimp = "视图(&V)"
+	French = "&Vue"
+	German = "&Ansicht"
+	Italian = "&Vista"
+	Romanian = "A&ratã"
+	Spanish = "&Ver"
+	SwedishChef = "F&eeoo"
+};
+"&Labels" = {
+	Catalan = "&Etiquetes"
+	ChineseSimp = "标签(&L)"
+	French = "&Étiquettes"
+	German = "&Bezeichnungen"
+	Italian = "&Etichetta"
+	Romanian = "&Etichetã"
+	Spanish = "&Etiquetas"
+	SwedishChef = "&Lebels"
+};
+"&Weights" = {
+	Catalan = "&Pesos"
+	ChineseSimp = "权值(&W)"
+	French = "&Poids"
+	German = "&Gewichte"
+	Italian = "&Peso"
+	Romanian = "&Cost"
+	Spanish = "&Pesos"
+	SwedishChef = "&Veeeghts"
+};
+"&Flows" = {
+	Catalan = "&Fluxos"
+	ChineseSimp = "流量(&F)"
+	French = "&Flux"
+	Italian = "&Flusso"
+ 	Romanian = "&Flux"
+	Spanish = "&Flujos"
+	SwedishChef = "&Floos"
+};
+
+### Graph
+"&Graph" = {
+	Catalan = "&Graf"
+	ChineseSimp = "图(&G)"
+	French = "&Graphe"
+	German = "&Graph"
+	Italian = "&Grafo"
+	Romanian = "&Graf"
+	Spanish = "&Grafo"
+	SwedishChef = "&Greph"
+};
+"&Clear\tCtrl-W" = "&Clear" + "\tCtrl-W";
+"\tCtrl-W" = literal;
+"&Clear" = {
+	Catalan = "Es&borrar"
+	ChineseSimp = "清除(&C)"
+	French = "&Effacer"
+	German = "&Löschen"
+	Italian = "&Cancella"
+	Romanian = "&ªterge"
+	Spanish = "&Borrar"
+	SwedishChef = "&Cleer"
+};
+"C&omplement" = {
+	Catalan = "C&omplementari"
+	ChineseSimp = "补图(&o)"
+	French = "&Complémentaire"
+	German = "&Komplement"
+	Italian = "C&omplementario"
+	Romanian = "C&omplement"
+	Spanish = "C&omplementario"
+	SwedishChef = "C&umplement"
+};
+"&Line Graph" = {
+	Catalan = "Graf &línia"
+	ChineseSimp = "边图(&L)"
+	French = "Graphe &Linéaire"
+	German = "&Line Graph"
+	Italian = "Grafo a &Linee"
+	Romanian = "&Line Graph"
+	Spanish = "Grafo &línea"
+	SwedishChef = "&Leene-a Greph"
+};
+"S&ubgraph" = {
+	Catalan = "S&ubgraf"
+	ChineseSimp = "诱导子图(&u)"
+	French = "So&us-graphe"
+	German = "S&ubgraph"
+	Italian = "So&ttografo"
+	Romanian = "S&ubgraf"
+	Spanish = "S&ubgrafo"
+	SwedishChef = "S&oobgreph"
+};
+###### Find
+"&Find" = {
+	Catalan = "&Cercar"
+	ChineseSimp = "寻找(&F)"
+	French = "&Chercher"
+	German = "&Suchen"
+	Italian = "C&erca"
+	Romanian = "&Cãutare"
+	Spanish = "&Buscar"
+	SwedishChef = "&Feend"
+};
+"&Shortest Path" = {
+	Catalan = "&Camí més curt"
+	ChineseSimp = "最短路(&S)"
+	French = "&Plus court chemin"
+	German = "&Kürzester Weg"
+	Italian = "&Cammino minimo"
+	Romanian = "Cel mai &scurt drum"
+	Spanish = "&Camino más corto"
+	SwedishChef = "&Shurtest Pet"
+};
+"&Breadth-First Search" = {
+	Catalan = "Cerca en &amplada"
+	ChineseSimp = "宽度优先搜索(&B)"
+	French = "Recherche en &largeur"
+	German = "&Breitensuche"
+	Italian = "Ricerca in &ampiezza"
+	Romanian = "Cãutare în &lãtime"
+	Spanish = "Búsqueda en &anchura"
+	SwedishChef = "&Breedt-Furst Seerch"
+};
+"&Depth-First Search" = {
+	Catalan = "Cerca en &profunditat"
+	ChineseSimp = "深度优先搜索(&D)"
+	French = "Recherche en p&rofondeur"
+	German = "&Tiefensuche"
+	Italian = "Ricerca in &Profondità"
+	Romanian = "Cãutare în &adâncime"
+	Spanish = "Búsqueda en &profundidad"
+	SwedishChef = "&Dept-Furst Seerch"
+};
+"&Minimum Spanning Tree" = {
+	Catalan = "&Arbre d'expansió mínim"
+	ChineseSimp = "最小生成树(&M)"
+	French = "Enjambement d'arbre &minimum"
+	German = "&Minimaler aufspannender Baum"
+	Italian = "Albero dei Cammini &Minimo"
+	Romanian = "Arbore &minim de acoperire"
+	Spanish = "&Ãrbol de expansión mínimo"
+	SwedishChef = "&Meenimoom Spunneeng Tree-a"
+};
+"Maximum &Flow" = {
+	Catalan = "&Flux màxim"
+	ChineseSimp = "最大流(&F)"
+	French = "&Flux maximal"
+	Italian = "Massimo &Flusso"
+ 	Romanian = "&Flux maxim"
+	Spanish = "&Flujo máximo"
+	SwedishChef = "Mexeemoom &Floo"
+};
+###### Properties
+"&Properties" = {
+	Catalan = "&Propietats"
+	ChineseSimp = "性质(&P)"
+	French = "&Propriétés"
+	German = "&Eigenschaften"
+	Italian = "&Proprietà"
+	Romanian = "&Proprietãþi"
+	Spanish = "&Propiedades"
+	SwedishChef = "&Pruperteees"
+};
+"&Connectivity" = {
+	Catalan = "&Connexió"
+	ChineseSimp = "连通性(&C)"
+	French = "&Connectivité"
+	German = "&Zusammenhängender Graph"
+	Italian = "&Connetività"
+	Romanian = "&Conectivitate"
+	Spanish = "&Conexión"
+	SwedishChef = "&Cunnecteefity"
+};
+"&Eulericity" = {
+	Catalan = "&Eulericitat"
+	ChineseSimp = "欧拉图(&E)"
+	French = "&Eulericité"
+	German = "&Eulerschergraph"
+	Italian = "&Eulericità"
+	Romanian = "&Eulericitate"
+	Spanish = "&Eulericidad"
+	SwedishChef = "&Ioolereecity"
+};
+"&Hamiltonicity" = {
+	Catalan = "&Hamiltonicitat"
+	ChineseSimp = "哈密顿图(&H)"
+	French = "&Hamiltonicité"
+	German = "&Hamiltongraph"
+	Italian = "&Hamiltonianità"
+	Romanian = "&Hamiltonitate"
+	Spanish = "&Hamiltonicidad"
+	SwedishChef = "&Hemeeltunicity"
+};
+"&Planarity" = {
+	Catalan = "&Planaritat"
+	ChineseSimp = "可平面性(&P)"
+	French = "&Planarité"
+	German = "&Planarität"
+	Italian = "&Planarità"
+	Romanian = "&Planaritate"
+	Spanish = "&Planaridad"
+	SwedishChef = "&Plunereety"
+};
+###### Statistics
+"&Statistics" = {
+	Catalan = "E&stadístiques"
+	ChineseSimp = "统计(&S)"
+	French = "&Statistiques"
+	German = "S&tatistiken"
+	Italian = "&Statistiche"
+	Romanian = "&Statistici"
+	Spanish = "E&stadísticas"
+	SwedishChef = "&Steteestics"
+};
+"&Adjacency Matrix" = {
+	Catalan = "Matriu d'&adjacència"
+	ChineseSimp = "邻接矩阵(&A)"
+	French = "Matrice &adjacente"
+	German = "&Adjazenzmatrix"
+	Italian = "Matrice d'&adiacenza"
+	Romanian = "Matrice de &adiacenþã"
+	Spanish = "Matriz de &adyacencia"
+	SwedishChef = "&Edjecency Metreex"
+};
+"&Degree Sequence" = {
+	Catalan = "Successió de &graus"
+	ChineseSimp = "度序列(&D)"
+	French = "Séquence de &degrés"
+	German = "&Grad Sequenz"
+	Italian = "Successione del &grado"
+	Romanian = "&Succesiune de grade"
+	Spanish = "Sucesión de &grados"
+	SwedishChef = "&Degree-a Seqooence-a"
+};
+"D&iameter" = {
+	Catalan = "&Diàmetre"
+	ChineseSimp = "直径(&i)"
+	French = "&Diamètre"
+	German = "&Durchmesser"
+	Italian = "&Diametro"
+	Romanian = "&Diametru"
+	Spanish = "&Diámetro"
+	SwedishChef = "Deee&meter"
+};
+"&Girth" = {
+	Catalan = "G&irth"
+	ChineseSimp = "围长(&G)"
+	French = "&Périmètre"
+	German = "&Umfang"
+	Italian = "G&irth"
+	Romanian = "&Girth"
+	Spanish = "G&irth"
+	SwedishChef = "&Gurt"
+};
+"&Radius" = {
+	Catalan = "&Radi"
+	ChineseSimp = "半径(&R)"
+	French = "&Rayon"
+	German = "&Radius"
+	Italian = "&Raggio"
+	Romanian = "&Razã"
+	Spanish = "&Radio"
+	SwedishChef = "&Redeeoos"
+};
+"&Chromatic Number" = {
+	Catalan = "Número &Cromàtic"
+	ChineseSimp = "色数(&C)"
+	French = "Nombre &chromatique"
+	German = "&Chormatische Zahl"
+	Italian = "Numero &Cromatico"
+	Romanian = "&Numãr cromatic"
+	Spanish = "Número &Cromático"
+	SwedishChef = "&Chrumeteec Noomber"
+};
+"C&hromatic Index" = {
+	Catalan = "Índex cro&màtic"
+	ChineseSimp = "色指数(&h)"
+	French = "Index c&hromatique"
+	German = "C&hromatischer Index"
+	Italian = "I&ndice Cromatico"
+	Romanian = "&Index Cromatic"
+	Spanish = "Índice cro&mático"
+	SwedishChef = "C&hrumeteec Index"
+};
+"Chromatic &Polynomial" = {
+	Catalan = "&Polinomi Cromàtic"
+	ChineseSimp = "色多项式(&P)"
+	French = "&Polynome chromatique"
+	German = "Chromatisches &Polynom"
+	Italian = "&Polinomio Cromatico"
+	Romanian = "&Polinom Cromatic"
+	Spanish = "&Polinomio Cromático"
+	SwedishChef = "Chrumeteec &Pulynumeeel"
+};
+
+### Prefab
+"&Prefab" = {
+	Catalan = "&Preestablert"
+	ChineseSimp = "预置图(&P)"
+	French = "&Préconçus"
+	German = "&Vorgefertigt"
+	Italian = "&Predefinito"
+	Romanian = "&Prestabilite"
+	Spanish = "&Preestablecido"
+	SwedishChef = "&Preffeb"
+};
+"Complete (&Kn)" = {
+	Catalan = "Complet (&Kn)"
+	ChineseSimp = "完全图(Kn)(&K)"
+	French = "Complet (&Kn)"
+	German = "Vollständig (&Kn)"
+	Italian = "Completo (&Kn)"
+	Romanian = "Complet (&Kn)"
+	Spanish = "Completo (&Kn)"
+	SwedishChef = "Cumplete-a (&Kn)"
+};
+"Complete &Bipartite (Kn,m)" = {
+	Catalan = "&Bipartit complet (Kn,m)"
+	ChineseSimp = "完全二分图(Kn,m)(&B)"
+	French = "Complet Bipartite (&Kn,m)"
+	German = "Vollständig &zweigeteilt (Kn,m)"
+	Italian = "&Bipartito Completo (Kn,m)"
+	Romanian = "Complet &bipartit (Kn,m)"
+	Spanish = "&Bipartido completo (Kn,m)"
+	SwedishChef = "Cumplete-a &Beepertite-a (Kn,m)"
+};
+"Cycle (&Cn)" = {
+	Catalan = "Cicle (&Cn)"
+	ChineseSimp = "环(Cn)(&C)"
+	French = "Cycle (&Cn)"
+	German = "Kreis (&Cn)"
+	Italian = "Ciclo (&Cn)"
+	Romanian = "Ciclu (&Cn)"
+	Spanish = "Ciclo (&Cn)"
+	SwedishChef = "Cycle-a (&Cn)"
+};
+"Gear (&Gn)" = {
+	Catalan = "Graf pinyó (&Gn)"
+	ChineseSimp = "齿轮图(Gn)(&G)"
+	French = "Volant (&Gn)"
+	German = "Verzahnter (&Gn)"
+	Italian = "Gear (&Gn)"
+	Romanian = "Gear (&Gn)"
+	Spanish = "Grafo piñón (&Gn)"
+	SwedishChef = "Geer (&Gn)"
+};
+"Hanoi (&Hn)" = {
+	Catalan = "Hanoi (&Hn)"
+	ChineseSimp = "Hanoi(Hn)(&H)"
+##### [fixme]
+	French = "Hanoi (&Hn)"
+	German = "Hanoi (&Hn)"
+	Italian = "Hanoi (&Hn)"
+	Romanian = "Hanoi (&Hn)"
+	Spanish = "Hanoi (&Hn)"
+	SwedishChef = "Hunuee (&Hn)"
+};
+"Ladder (&Ln)" = {
+	Catalan = "Escala (&Ln)"
+	ChineseSimp = "Ladder (&Ln)"
+##### [fixme]
+	French = "Échelle (&Ln)"
+	German = "Leiter (&Ln)"
+	Italian = "Ladder (&Ln)"
+	Romanian = "Scarã (&Ln)"
+	Spanish = "Escalera (&Ln)"
+	SwedishChef = "Ledder (&Ln)"
+};
+"Lattice (Ln,m)" = {
+	Catalan = "Malla (Ln,m)"
+	ChineseSimp = "Lattice (Ln,m)"
+##### [fixme]
+	French = "Maillage (Ln,m)"
+	German = "Gitter (Ln,m)"
+	Italian = "Lattice (Ln,m)"
+	Romanian = "Lattice (Ln,m)"
+	Spanish = "Malla (Ln,m)"
+	SwedishChef = "Letteece-a (Ln,m)"
+};
+"Null (&Nn)" = {
+	Catalan = "Nul (&Nn)"
+	ChineseSimp = "空图(Nn)(&N)"
+	French = "Nul (&Nn)"
+	German = "Null (&Nn)"
+	Italian = "Nullo (&Nn)"
+	Romanian = "Nul (&Nn)"
+	Spanish = "Nulo (&Nn)"
+	SwedishChef = "Nooll (&Nn)"
+};
+"Star (&Sn)" = {
+	Catalan = "Estel (&Sn)"
+	ChineseSimp = "星(Sn)(&S)"
+	French = "Étoile (&Sn)"
+	German = "Stern (&Sn)"
+	Italian = "Stella (&Sn)"
+	Romanian = "Stea (&Sn)"
+	Spanish = "Estrella (&Sn)"
+	SwedishChef = "Ster (&Sn)"
+};
+"Tree (&Tn)" = {
+	Catalan = "Arbre (&Tn)"
+	ChineseSimp = "树(Tn)(&T)"
+	French = "Arbre (&Tn)"
+	German = "Baum (&Tn)"
+	Italian = "Albero (&Tn)"
+	Romanian = "Arbore (&Tn)"
+	Spanish = "Ãrbol (&Tn)"
+	SwedishChef = "Tree-a (&Tn)"
+};
+"Wheel (&Wn)" = {
+	Catalan = "Roda (&Wn)"
+	ChineseSimp = "轮状图(&Wn)(&W)"
+	French = "Roue (&Wn)"
+	German = "Rad (&Wn)"
+	Italian = "Foresta (&Wn)"
+	Romanian = "Roatã (&Wn)"
+	Spanish = "Rueda (&Wn)"
+	SwedishChef = "Vheel (&Wn)"
+};
+"Petersen" = {
+	Catalan = "Petersen"
+	ChineseSimp = "Petersen图"
+	French = "Petersen"
+	German = "Petersen"
+	Italian = "Petersen"
+	Romanian = "Petersen"
+	Spanish = "Petersen"
+	SwedishChef = "Petersee"
+};
+###### Platonic
+"&Platonic" = {
+	Catalan = "&Platònic"
+	ChineseSimp = "柏拉图体(&P)"
+	French = "&Platonique"
+	German = "&Platonisch"
+	Italian = "&Platonico"
+	Romanian = "&Platonic"
+	Spanish = "&Platónico"
+	SwedishChef = "&Pletuneec"
+};
+"&Tetrahedral" = {
+	Catalan = "&Tetraedre"
+	ChineseSimp = "四面体(&T)"
+	French = "&Tétraédral"
+	German = "&Tetradrisch"
+	Italian = "&Tetraedre"
+	Romanian = "&Tetraedru"
+	Spanish = "&Tetraedro"
+	SwedishChef = "&Tetrehedrel"
+};
+"&Cubical" = {
+	Catalan = "&Cub"
+	ChineseSimp = "立方体(&C)"
+	French = "&Cubique"
+	German = "&Kubisch"
+	Italian = "&Cubo"
+	Romanian = "&Cub"
+	Spanish = "&Cubo"
+	SwedishChef = "&Coobeecel"
+};
+"&Octahedral" = {
+	Catalan = "&Octoedre"
+	ChineseSimp = "八面体(&O)"
+	French = "&Octaédral"
+	German = "&Oktaedrisch"
+	Italian = "&Ottoedro"
+	Romanian = "&Octaedru"
+	Spanish = "&Octoedro"
+	SwedishChef = "&Ooctehedrel"
+};
+"&Dodecahedral" = {
+	Catalan = "&Dodecaedre"
+	ChineseSimp = "十二面体(&D)"
+	French = "&Dodécaédral"
+	German = "&Dodekaedrisch"
+	Italian = "&Dodecaedro"
+	Romanian = "&Dodecaedru"
+	Spanish = "&Dodecaedro"
+	SwedishChef = "&Dudecehedrel"
+};
+"&Icosahedral" = {
+	Catalan = "&Icosaedre"
+	ChineseSimp = "二十面体(&I)"
+	French = "&Icosaédral"
+	German = "&Ikosaedrisch"
+	Italian = "&Icosaedro"
+	Romanian = "&Icosaedru"
+	Spanish = "&Icosaedro"
+	SwedishChef = "&Icusehedrel"
+};
+
+### Help
+"&Help" = {
+	Catalan = "&Ajuda"
+	ChineseSimp = "帮助(&H)"
+	French = "&Aide"
+	German = "&Hilfe"
+	Italian = "&Aiuto"
+	Romanian = "&Ajutor"
+	Spanish = "&Ayuda"
+	SwedishChef = "&Help"
+};
+"&About\tF1" = "&About" + "\tF1";
+"\tF1" = literal;
+"&About" = {
+	Catalan = "&Sobre"
+	ChineseSimp = "关于(&A)"
+	French = "&À propos"
+	German = "&Über"
+	Italian = "&Informazioni"
+	Romanian = "&Despre"
+	Spanish = "&Sobre"
+	SwedishChef = "&Ebuoot"
+};
+
+
+### Popup menus
+"&Add Edge" = {
+	Catalan = "&Afegir Aresta"
+	ChineseSimp = "添加边(&A)"
+	French = "&Ajouter une arête"
+	German = "Kante &Hinzufügen"
+	Italian = "&Aggiungi Arco"
+	Romanian = "&Adaugã Muchie"
+	Spanish = "&Añadir Arista"
+	SwedishChef = "&Edd Idge-a"
+};
+"&Remove Edge" = {
+	Catalan = "&Eliminar Aresta"
+	ChineseSimp = "删除边(&R)"
+	French = "&Supprimer une arête"
+	German = "Kante &Entfernen"
+	Italian = "&Elimina Arco"
+	Romanian = "&ªterge Muchie"
+	Spanish = "&Eliminar Arista"
+	SwedishChef = "&Remufe-a Idge-a"
+};
+
+#------------------------- Dialogs -------------------------#
+
+"About..." = "About" + "...";
+
+# XXX: Are there better translations than these?
+"OK" = {
+	Catalan = "OK"
+	ChineseSimp = "确定"
+	French = "OK"
+	German = "OK"
+	Italian = "OK"
+	Romanian = "OK"
+	Spanish = "OK"
+	SwedishChef = "Ookey"
+};
+"Cancel" = {
+	Catalan = "Cancel·lar"
+	ChineseSimp = "取消"
+	French = "Annuler"
+	German = "Abbrechen"
+	Italian = "Cancella"
+	Romanian = "Renunþã"
+	Spanish = "Cancelar"
+	SwedishChef = "Cuncel"
+};
+
+"Loading failed" = {
+	Catalan = "Error en càrrega"
+	ChineseSimp = "载入失败"
+	French = "Chargement échoué"
+	German = "Laden fehlgeschlagen"
+	Italian = "Caricamento fallito"
+	Romanian = "Încãrcarea a eºuat"
+	Spanish = "Error en carga"
+	SwedishChef = "Luedeeng feeeled"
+};
+
+"This program is free software; you can redistribute\n"
+"it and/or modify it under the terms of the GNU\n"
+"General Public License, version 2, as published by\n"
+"the Free Software Foundation.\n\n"
+"This program is distributed in the hope that it will\n"
+"be useful, but WITHOUT ANY WARRANTY; without even\n"
+"the implied warranty of MERCHANTABILITY or FITNESS\n"
+"FOR A PARTICULAR PURPOSE. See the GNU General\n"
+"Public License for more details." = {
+	Catalan =
+		"Traduït al català per\n"
+		"Josep M. Lopez <josep.m.lopez@urv.cat>"
+		"\n\n"
+		"Aquest programa és Software Lliure; podeu\n"
+		"redistribuir-lo i/o modificar-lo sota els termes\n"
+		"de la \"GNU General Public License\" com la\n"
+		"publica la \"FSF Free Software Foundation\".\n\n"
+		"Aquest programa es distribueix esperant que\n"
+		"us serà útil, pero SENSE CAP MENA DE GARANTIA;\n"
+		"ni tan sols la garantía implícita pel MERCADEIG\n"
+		"o EXERCICI D'ALGÃN PROPÃSIT en particular.\n"
+		"Vegeu la \"GNU General Public License\" per més detalls."
+	ChineseSimp =
+		"本程序为自由软件；您可依据自由软件基金会所发表的GNU通用公共\n"
+		"授权条款规定，就本程序再次发布无论是否有修改。\n\n"
+		"本程序是基于使用目的而加以发布，然而不负任何担保责任；亦无对\n"
+		"适售性或特定目的适用性所为的默示性担保。详情请参照GNU通用公共授权。"
+	French =
+		"Traduit en français par\n"
+		"Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>\n"
+		"\n\n"
+
+		"Ce programme est un logiciel libre ; vous pouvez\n"
+		"le redistribuer et/ou le modifier au titre des\n"
+		"clauses de la Licence Publique Générale GNU, telle\n"
+		"que publiée par la Free Software Foundation ; soit\n"
+		"la version 2 de la Licence. Ce programme est distribué\n"
+		"dans l'espoir qu'il sera utile, mais SANS AUCUNE GARANTIE ;\n"
+		"sans même une garantie implicite de COMMERCIABILITE ou\n"
+		"DE CONFORMITE A UNE UTILISATION PARTICULIERE. Voir la\n"
+		"Licence Publique Générale GNU pour plus de détails."
+	German =
+		"Deutsche Übersetzung von\n"
+		"Tilman Linneweh <arved@arved.at>"
+		"\n"
+		"Die Deutsche Übersetzung ist noch nicht perfekt. Bitte\n"
+		"sendet Verbesserungsvorschläge an mich, Tilman Linneweh.\n"
+		"\n\n"
+		"Dieses Programm ist freie Software. Sie können es\n"
+		"unter den Bedingungen der GNU General Public License,\n"
+		"wie von der Free Software Foundation veröffentlicht,\n"
+		"weitergeben und/oder modifizieren, entweder gemäß\n"
+		"Version 2 der Lizenz.\n\n"
+		"Die Veröffentlichung dieses Programms erfolgt in der\n"
+		"Hoffnung, daß es Ihnen von Nutzen sein wird, aber\n"
+		"OHNE IRGENDEINE GARANTIE, sogar ohne die implizite\n"
+		"Garantie der MARKTREIFE oder der VERWENDBARKEIT\n"
+		"FÜR EINEN BESTIMMTEN ZWECK. Details finden Sie in\n"
+		"der GNU General Public License."
+	Italian =
+		"Semi tradotto in Italiano da\n"
+		"Matteo Boccafoli <boccafoli@gmail.com>"
+		"\n\n"
+		"Questo programma è software libero; è lecito ridistribuirlo\n"
+		"e/o modificarlo secondo i termini della Licenza Pubblica\n"
+		"Generica GNU come pubblicata dalla Free Software Foundation;\n"
+		"o la versione 2 della licenza. Questo programma è\n"
+		"distribuito nella speranza che sia utile, ma SENZA ALCUNA\n"
+		"GARANZIA; senza neppure la garanzia implicita di\n"
+		"COMMERCIABILITA o di APPLICABILITA PER UN PARTICOLARE\n"
+		"SCOPO. Si veda la Licenza Pubblica Generica GNU per avere\n"
+		"maggiori dettagli."
+	Romanian = 
+		"Traducerea în limba românã de\n"
+		"Ion Savin <comp_@gmx.net>\n\n"
+		"Acest program este liber; îl puteþi redistribui ºi/sau modifica în\n"
+		"conformitate cu termenii Licenþei Publice Generale GNU aºa cum\n"
+		"este publicatã de Free Software Foundation, versiunea 2 a Licenþei.\n\n"
+		"Acest program este distribuit cu speranþa de a fi util, dar FÃRÃ\n"
+		"NICI O GARANÞIE, fãrã garanþie implicitã de vandabilitate ºi\n"
+		"conformitate unui anumit scop. Citiþi Licenþa Publicã Generalã GNU\n"
+		"pentru detalii."
+	Spanish =
+		"Traducido al español por\n"
+		"Josep M. Lopez <josep.m.lopez@urv.cat>"
+		"\n\n"
+		"Este programa es Software Libre; usted puede\n"
+		"redistribuirlo y/o modificarlo bajo los términos\n"
+		"de la \"GNU General Public License\" como lo\n"
+		"publica la \"FSF Free Software Foundation\".\n\n"
+		"Este programa es distribuido con la esperanza\n"
+		"de que le será útil, pero SIN NINGUNA GARANTIA;\n"
+		"incluso sin la garantía implícita por el MERCADEO\n"
+		"o EJERCICIO DE ALGUN PROPOSITO en particular.\n"
+		"Vea la \"GNU General Public License\" para más detalles."
+	SwedishChef =
+		"Svedeesh Cheff Trunsleshun by\n"
+		"Defeed Symunds <dsymonds@gmail.com>\n"
+		"(thunks tu \"Encheferizer\" by Juhn Hegermun:\n"
+		"http://www.almac.co.uk/chef/chef/chef.html)"
+		"\n\n"
+		"Thees prugrem is free-a sufftvere-a; yuoo cun\n"
+		"redeestriboote-a it und/oor mudeeffy it under zee\n"
+		"terms ooff zee GNOO Generel Poobleec Leecense-a,\n"
+		"ferseeun 2, es poobleeshed by zee Free-a Sufftvere-a\n"
+		"Fuoondeshun.\n\n"
+		"Thees prugrem is deestribooted in zee hupe-a thet\n"
+		"it veell be-a useffool, boot VITHOOOT ENY VERRENTY;\n"
+		"veethuoot ifee zee impleeed verrunty ooff\n"
+		"MERCHENTEBILITY oor FITNESS FOR A PERTICOOLER\n"
+		"POORPOSE. See-a zee GNOO Generel Poobleec Leecense-a\n"
+		"fur mure-a deteeels."
+};
+
+"Edge Properties" = {
+	Catalan = "Propietats de l'aresta"
+	ChineseSimp = "边属性"
+	French = "Propriétés de l'arête"
+	German = "Kanten Eigenschaften"
+	Italian = "Proprietà dell'arco"
+	Romanian = "Proprietãþi Muchie"
+	Spanish = "Propiedades de la arista"
+	SwedishChef = "Idge-a Pruperteees"
+};
+"Edge weight:" = {
+	Catalan = "Pes de l'aresta:"
+	ChineseSimp = "边权值："
+	French = "Poids de l'arête :"
+	German = "Kantengewicht:"
+	Italian = "Peso dell'arco:"
+	Romanian = "Cost Muchie:"
+	Spanish = "Peso de la arista:"
+	SwedishChef = "Idge-a veeeght:"
+};
+"Edge flow:" = {
+	Catalan = "Flux d'aresta:"
+	ChineseSimp = "流："
+	French = "Flux de l'arête :"
+	Italian = "Flusso dell'arco:"
+ 	Romanian = "Flux muchie:"
+	Spanish = "Flujo de arista:"
+	SwedishChef = "Idge-a floo:"
+};
+"Vertex Properties" = {
+	Catalan = "Propietats del vértex"
+	ChineseSimp = "顶点属性"
+	French = "Propriétés du sommet"
+	German = "Vertex Eigenschaften"
+	Italian = "Proprietà del vertice"
+ 	Romanian = "Proprietãþi Vârf"
+	Spanish = "Propiedades del vértice"
+	SwedishChef = "Fertex Pruperteees"
+};
+"Label:" = {
+	Catalan = "Etiqueta:"
+	ChineseSimp = "标签："
+	French = "Étiquette :"
+	German = "Bezeichnung:"
+	Italian = "Etichetta:"
+	Romanian = "Etichetã:"
+	Spanish = "Etiqueta:"
+	SwedishChef = "Lebel:"
+};
+
+"Load File" = {
+	Catalan = "Obrir Fitxer"
+	ChineseSimp = "打开文件"
+	French = "Ouvrir un fichier"
+	German = "Datei öffnen"
+	Italian = "Apri File"
+	Romanian = "Încarcã Fiºier"
+	Spanish = "Abrir Fichero"
+	SwedishChef = "Lued Feele-a"
+};
+"Save File" = {
+	Catalan = "Desar Fitxer"
+	ChineseSimp = "保存文件"
+	French = "Sauver le fichier"
+	German = "Datei Speichern"
+	Italian = "Salva File"
+	Romanian = "Salveazã Fiºier"
+	Spanish = "Guardar Fichero"
+	SwedishChef = "Sefe-a Feele-a"
+};
+"Print to File" = {
+	Catalan = "Imprimir a Fitxer"
+	ChineseSimp = "打印到文件"
+	French = "Imprimer dans un fichier"
+	German = "in Datei Drucken"
+	Italian = "Stampa su File"
+	Romanian = "Tipãreste în Fiºier"
+	Spanish = "Imprimir a Fichero"
+	SwedishChef = "Preent tu Feele-a"
+};
+
+"Exponent:" = {
+	Catalan = "Exponent:"
+	ChineseSimp = "指数："
+	French = "Exposant :"
+	German = "Exponent:"
+	Italian = "Esponente:"
+	Romanian = "Exponent:"
+	Spanish = "Exponente:"
+	SwedishChef = "Ixpunent:"
+};
+
+"Subgraph" = "S&ubgraph" subst "&" / "";
+"Shortest Path" = "&Shortest Path" subst "&" / "";
+"Breadth-First Search" = "&Breadth-First Search" subst "&" / "";
+"Depth-First Search" = "&Depth-First Search" subst "&" / "";
+"Maximum Flow" = "Maximum &Flow" subst "&" / "";
+"Connectivity" = "&Connectivity" subst "&" / "";
+"Eulericity" = "&Eulericity" subst "&" / "";
+"Adjacency Matrix" = "&Adjacency Matrix" subst "&" / "";
+"Degree Sequence" = "&Degree Sequence" subst "&" / "";
+"Diameter" = "D&iameter" subst "&" / "";
+"Radius" = "&Radius" subst "&" / "";
+"Chromatic Number" = "&Chromatic Number" subst "&" / "";
+"Chromatic Index" = "C&hromatic Index" subst "&" / "";
+"Chromatic Polynomial" = "Chromatic &Polynomial" subst "&" / "";
+
+"Prefab Parameter" = {
+	Catalan = "Paràmetre de Preestablert"
+	ChineseSimp = "预置图参数"
+	French = "Paramètre"
+	German = "Ausgangsparameter"
+	Italian = "Parametro Prestabilito"
+	Romanian = "Parametru Prestabilit"
+	Spanish = "Parámetro de Preestablecido"
+	SwedishChef = "Preffeb Peremeter"
+};
+"Complete:" = "Complete (&Kn)" subst " (&Kn)" / ":";
+"Complete &Bipartite:" = "Complete &Bipartite (Kn,m)" subst " (Kn,m)" / ":";
+"Complete Bipartite:" = "Complete &Bipartite:" subst "&" / "";
+"Cycle:" = "Cycle (&Cn)" subst " (&Cn)" / ":";
+"Gear:" = "Gear (&Gn)" subst " (&Gn)" / ":";
+"Ladder:" = "Ladder (&Ln)" subst " (&Ln)" / ":";
+"Lattice:" = "Lattice (Ln,m)" subst " (Ln,m)" / ":";
+"Null:" = "Null (&Nn)" subst " (&Nn)" / ":";
+"Star:" = "Star (&Sn)" subst " (&Sn)" / ":";
+"Wheel:" = "Wheel (&Wn)" subst " (&Wn)" / ":";
+
+#------------------------- Result messages -------------------------#
+
+# This is used, for example, when there is no result
+# (e.g. the degree sequence of an empty graph)
+"(none)" = "(" + "none" + ")";
+"none" = {
+	Catalan = "cap"
+	ChineseSimp = "无"
+	French = "aucun"
+	German = "keine"
+	Italian = "niente"
+	Romanian = "none"
+	Spanish = "nada"
+	SwedishChef = "nune-a"
+};
+
+"Graph is connected." = {
+	Catalan = "Graf connex."
+	ChineseSimp = "这是一个连通图。"
+	French = "Le graphe est connexe."
+	German = "Der Graph ist zusammenhängend."
+	Italian = "Grafo connesso."
+	Romanian = "Graful este conex."
+	Spanish = "Grafo conexo."
+	SwedishChef = "Greph is cunnected."
+};
+"Graph is weakly connected." = {
+	Catalan = "El graf té connexió feble."
+	ChineseSimp = "这是一个弱连通图。"
+	French = "Le graphe est faiblement connexe."
+	German = "Der Graph ist schwach zusammehängend."
+	Italian = "Grafo è debolmente connesso."
+	Romanian = "Graful nu este tare conex."
+	Spanish = "El grafo tiene conexión débil."
+	SwedishChef = "Greph is veekly cunnected."
+};
+"Graph is strongly connected." = {
+	Catalan = "El digraf és fortament connex."
+	ChineseSimp = "这是一个强连通图。"
+	French = "Le graphe est fortement connexe."
+	German = "Der Graph ist stark zusammenhängend."
+	Italian = "Grafo è fortemente connesso."
+	Romanian = "Graful este tare conex."
+	Spanish = "El digrafo es fuertemente conexo."
+	SwedishChef = "Greph is strungly cunnected."
+};
+"Graph is Eulerian." = {
+	Catalan = "Graf eulerià."
+	ChineseSimp = "这是一个欧拉图。"
+	French = "Le graphe est eulérien."
+	German = "Der Graph ist ein Eulerscher Graph."
+	Italian = "Grafo Euleriano."
+	Romanian = "Graful este eulerian."
+	Spanish = "Grafo euleriano."
+	SwedishChef = "Greph is Ioolereeun."
+};
+"Graph is neither Eulerian nor Semi-Eulerian." = {
+	Catalan = "Graf ni eulerià ni semi eulerià."
+	ChineseSimp = "这是既不是欧拉图，也不是准欧拉图。"
+	French = "Le graphe n'est ni eulérien ni semi-eulérien."
+	German = "Der Graph ist weder ein eulerscher Graph noch ein "
+							"semi-eulerscher."
+	Italian = "Grafo ne euleriano ne semi euleriano."
+	Romanian = "Graful nu este nici eulerian nici semi-eulerian."
+	Spanish = "Grafo ni euleriano ni semi euleriano."
+	SwedishChef = "Greph is neeezeer Ioolereeun nur Semee-Ioolereeun."
+};
+"Graph is not connected." = {
+	Catalan = "Graf no connex."
+	ChineseSimp = "这不是一个连通图。"
+	French = "Le graphe n'est pas connexe."
+	German = "Der Graph ist nicht zusammenhängend."
+	Italian = "Grafo non connesso."
+	Romanian = "Graful nu este conex."
+	Spanish = "Grafo no conexo."
+	SwedishChef = "Greph is nut cunnected."
+};
+"Graph is Semi-Eulerian." = {
+	Catalan = "Graf semi eulerià."
+	ChineseSimp = "这是一个准欧拉图。"
+	French = "Le graphe est semi-eulérien."
+	German = "Der Graph ist ein semi-eulerscher Graph."
+	Italian = "Grafo semi Euleriano."
+	Romanian = "Graful este semi-eulerian."
+	Spanish = "Grafo semi euleriano."
+	SwedishChef = "Greph is Semee-Ioolereeun."
+};
+"No path found." = {
+	Catalan = "Cap camí trobat."
+	ChineseSimp = "未找到路径。"
+	French = "Aucun chemin trouvé."
+	German = "Kein Weg gefunden."
+	Italian = "Percorso non trovato."
+	Romanian = "Nici un drum gasit."
+	Spanish = "No se ha encontrado camino."
+	SwedishChef = "Nu pet fuoond."
+};
+"Shortest path is %i." = {
+	Catalan = "El camí més curt és %i."
+	ChineseSimp = "最短路是 %i。"
+	French = "Le plus court chemin est %i."
+	German = "Der Kürzeste Weg ist %i."
+	Italian = "Il cammino minimo é %i."
+	Romanian = "Cel mai scurt drum este %i."
+	Spanish = "El camino más corto es %i."
+	SwedishChef = "Shurtest pet is %i."
+};
+"Maximum flow is %i." = {
+	ChineseSimp = "最大流是 %i。"
+	SwedishChef = "Mexeemoom floo is %i."
+};
+
+
+#------------------------- Undo messages -------------------------#
+
+"Load graph" = {
+	Catalan = "Carrega graf"
+	ChineseSimp = "打开文件"
+	French = "Charger un graphe"
+	Italian = "Carica grafo"
+ 	Romanian = "Încarcã graf"	
+	Spanish = "Carga grafo"
+	SwedishChef = "Lued greph"
+};
+"Clear graph" = {
+	Catalan = "Esborrar graf"
+	ChineseSimp = "清空图"
+	French = "Effacer le graphe"
+	German = "Lösche graph"
+	Italian = "Cancella grafo"
+ 	Romanian = "ªterge graful"
+	Spanish = "Borrar grafo"
+ 	SwedishChef = "Cleer greph"
+};
+"Complement graph" = {
+	Catalan = "Fer complementari"
+	ChineseSimp = "补图"
+	French = "Graphe complémentaire"
+	German = "Komplementärgraph"
+	Italian = "Grafo completo"
+	Romanian = "Complementul grafului"
+	Spanish = "Hacer complementario"
+	SwedishChef = "Cumplemunt greph"
+};
+"Line Graph" = "&Line Graph" subst "&" / "";
+"Induced subgraph" = {
+	Catalan = "Subgraf Induït"
+	ChineseSimp = "诱导子图"
+	French = "Graphe induit"
+	Italian = "Incluso sottografo"
+	Romanian = "Subgraful indus"
+	Spanish = "Subgrafo inducido"
+	SwedishChef = "Indooced soobgreph"
+};
+"Make prefab" = {
+	Catalan = "Fer predefinit"
+	ChineseSimp = "使用预制图"
+	French = "Créer un préconçu"
+	German = "Erzeuge prefab"
+	Italian = "Crea predefinito"
+	Romanian = "Creazã predefinit"
+	Spanish = "Hacer predefinido"
+	SwedishChef = "Meke-a preffeb"
+};
+
+"Add vertex" = {
+	Catalan = "Afegir vèrtex"
+	ChineseSimp = "增加顶点"
+	French = "Ajouter un vecteur"
+	German = "Vertex hinzufügen"
+	Italian = "Aggiungi vertice"
+	Romanian = "Adaugã vârf"
+	Spanish = "Añadir vértice"
+	SwedishChef = "Edd fertex"
+};
+"Add edge" = {
+	Catalan = "Afegir aresta"
+	ChineseSimp = "增加边"
+	French = "Ajouter une arête"
+	German = "Kante hinzufügen"
+	Italian = "Aggiungi vertice"
+	Romanian = "Adaugã muchie"
+	Spanish = "Añadir arista"
+	SwedishChef = "Edd idge-a"
+};
+"Delete objects" = {
+	Catalan = "Esborra objectes"
+	ChineseSimp = "删除对象"
+	French = "Supprimer les objets"
+	German = "Lösche objekt"
+	Italian = "Cancella oggetti"
+	Romanian = "ªterge obiecte"
+	Spanish = "Borra objetos"
+	SwedishChef = "Delete-a oobjects"
+};
+
+"Rename vertex" = {
+	Catalan = "Reanomenar vèrtex"
+	ChineseSimp = "重命名顶点"
+	French = "Renommer le sommet"
+	German = "Vertex umbenennen"
+	Italian = "Rinomina vertice"
+	Romanian = "Redenumeºte vârful"
+	Spanish = "Renombrar vértice"
+	SwedishChef = "Runeme-a fertex"
+};
+"Edge direction:" = {
+	Catalan = "Direcció d'aresta:"
+	ChineseSimp = "边的方向："
+	French = "Direction de l'arc:"
+	German = "Kantenrichtung:"
+	Italian = "Direzione arco:"
+	Romanian = "Direcþia arcului:"
+	Spanish = "Dirección de arista:"
+	SwedishChef = "Idge-a deerecshun:"
+};
+"Change edge weight" = {
+	Catalan = "Canviar pes d'aresta"
+	ChineseSimp = "改变边的权值"
+	French = "Changer le poids de l'arête"
+	German = "Ändere Kantengewicht"
+	Italian = "Cambia peso dell'arco"
+	Romanian = "Modificã costul muchiei"
+	Spanish = "Cambiar peso de arista"
+	SwedishChef = "Chunge-a idge-a veeeght"
+};
+"Change edge direction" = {
+	Catalan = "Canviar direcció d'aresta"
+	ChineseSimp = "改变边的方向"
+	French = "Changer la direction de l'arc"
+	German = "Ändere Kantenrichtung"
+	Italian = "Cambia direzione arco"
+	Romanian = "Modificã direcþia arcului"
+	Spanish = "Cambiar dirección de arista"
+	SwedishChef = "Chunge-a idge-a deerecshun"
+};
+"Change edge weight and direction" = {
+	Catalan = "Canviar pes i direcció d'aresta"
+	ChineseSimp = "改变边的权值和方向"
+	French = "Changer le poids et la direction de l'arc"
+	German = "Ändere Kantengewicht und -richtung"
+	Italian = "Cambia peso e direzione arco"
+	Romanian = "Modificã costul ºi direcþia arcului"
+	Spanish = "Cambiar peso y dirección de arista"
+	SwedishChef = "Chunge-a idge-a veeeght und deerecshun"
+};
+
+#------------------------- Error messages -------------------------#
+
+"At least one vertex must be selected to induce a subgraph." = {
+	Catalan = "Per induir un subgraf, cal haver seleccionat un o més "
+								"vèrtexs."
+	ChineseSimp = "至少要选中一个顶点才可以作诱导子图。"
+	French = "Pour induire un sous-graphe, vous devez sélectionner au"
+	                                                "moins un sommet."
+	German = "Mindestens ein vertex muss ausgewählt sein um den Subgraph "
+								"zu bewegen."
+	Italian = "Per indurre un sottografo, di deve selezionare un vertice."
+	Romanian = "Cel puþin un vârf trebuie selectat pentru a induce un subgraf."
+	Spanish = "Para inducir un subgrafo, debe seleccionarse, como mínimo, "
+								"un vértice."
+	SwedishChef = "Et leest oone-a fertex moost be-a selected tu "
+						"indooce-a a soobgreph."
+};
+"Exactly one vertex must be selected to perform a Breadth-First Search." = {
+	Catalan = "Per tal de fer una cerca per amplada cal sel·leccionar "
+							"un sol vértex."
+	ChineseSimp = "必须选中一个顶点才可以进行宽度优先搜索。"
+	French = "Pour effectuer une recherche en largeur d'abord, un"
+				"sommet exactement doit être sélectionné."
+	German = "Für die Breitensuche muss genau ein Knoten ausgewählt sein."
+	Italian = "Per effettuare una ricerca in ampiezza, si deve selezionare"
+	                                                " un solo vertice."
+	Romanian = "Exact un vârf trebuie selectat pentru a cãuta "
+							"în lãþime."
+	Spanish = "Para efectuar una búsqueda por anchura hay que seleccionar "
+							"un sólo vértice."
+	SwedishChef = "Ixectly oone-a fertex moost be-a selected tu perffurm "
+							"a Breedt-Furst Seerch."
+};
+"Exactly one vertex must be selected to perform a Depth-First Search." = {
+	Catalan = "Per tal de fer una cerca en profunditat cal "
+						"sel·leccionar un sol vértex."
+	ChineseSimp = "必须选中一个顶点才可以进行深度优先搜索。"
+	French = "Pour effectuer une recherche en profondeur d'abord, un"
+				"sommet exactement doit être sélectionné."
+	German = "Für die Tiefensuche muss genau ein Knoten ausgewählt sein."
+	Italian = "Per effettuare una ricerca in profondità, si deve "
+						"selezionare un solo vertice."
+	Romanian = "Exact un vârf trebuie selectat pentru a cãuta "
+							"în adâncime."
+	Spanish = "Para efectuar una búsqueda en profundidad hay que "
+						"seleccionar un sólo vértice."
+	SwedishChef = "Ixectly oone-a fertex moost be-a selected tu perffurm "
+							"a Dept-Furst Seerch."
+};
+"Exactly two vertices must be selected to find a shortest path." = {
+	Catalan = "Per tal de cercar el camí més curt, cal que hi hagi "
+						"dos vértexs sel·leccionats."
+	ChineseSimp = "必须选中两个顶点才可以寻找最短路。"
+	French = "Pour effectuer une recherche du plus court chemin,"
+			"deux sommets exactement doivent être sélectionnés."
+	German = "Um den kürzesten Weg zu finden, müssen genau zwei "
+						"Punkte ausgewählt sein."
+	Italian = "Per trovare un cammino minimo, si devono selezionare"
+		                                         " due vertici."
+	Romanian = "Exact douã vârfuri trebuie selectate pentru a cãuta cel "
+						"mai scurt drum."
+	Spanish = "Para buscar el camino más corto debe haber exactamante "
+						"dos vértices seleccionados."
+	SwedishChef = "Ixectly tvu ferteeces moost be-a selected tu feend a "
+							"shurtest pet."
+};
+"Exactly two vertices must be selected to find a maximum flow." = {
+	Catalan = "Cal seleccionar exactament dos vèrtexs per trobar-ne"
+							" el flux màxim."
+	ChineseSimp = "必须选中两个顶点才可以寻找最大流。"
+	French = "Pour trouver un flux maximal, deux sommets exactement"
+					"doivent être sélectionnés."
+	Italian = "Per trovare un flusso massimo, si devono selezionare"
+		                                         " due vertici."
+ 	Romanian = "Exact douã vârfuri trebuie selectate pentru a cãuta"
+ 							"fluxul maxim."
+	Spanish = "Hay que seleccionar exactamente dos vértices para encontrar"
+							" el flujo máximo."
+	SwedishChef = "Ixectly tvu ferteeces moost be-a selected tu feend a "
+							"mexeemoom floo."
+};
+
+#------------------------- Miscellaneous -------------------------#
+
+# Stuff appearing in the statusbar (bottom of main area)
+"About GraphThing" = {
+	Catalan = "Sobre de GraphThing"
+	ChineseSimp = "关于 GraphThing"
+	French = "À propos de GraphThing"
+	German = "Über GraphThing"
+	Italian = "Circa GraphThing"
+	Romanian = "Despre GraphThing"
+	Spanish = "Acerca de GraphThing"
+	SwedishChef = "Ebuoot GrephTheeng"
+};
+"Computing chromatic number..." = {
+	Catalan = "Calculant número cromàtic..."
+	ChineseSimp = "计算色数..."
+	French = "Calcul du nombre chromatique..."
+	German = "Berechne chromatische Zahl..."
+	Italian = "Calcolando il numero cromatico..."
+	Romanian = "Calculez numãrul cromatic..."
+	Spanish = "Calculando número cromático..."
+	SwedishChef = "Cumpooteeng chrumeteec noomber..."
+};
+"Computing chromatic index..." = {
+	Catalan = "Calculant l'índex cromàtic..."
+	ChineseSimp = "计算色指数..."
+	French = "Calcul de l'index chromatique..."
+	German = "Berechnung des chromatischen index..."
+	Italian = "Calcolando l'indice cromatico..."
+	Romanian = "Calculez index-ul cromatic..."
+	Spanish = "Calculando el índice cromático..."
+	SwedishChef = "Cumpooteeng chrumeteec index..."
+};
+"Computing chromatic polynomial..." = {
+	Catalan = "Calculant polinomi cromàtic..."
+	ChineseSimp = "计算色多项式..."
+	French = "Calcul du polynome chromatique..."
+	German = "Berechne chromatisches Polynom..."
+	Italian = "Calcolando il polinomio cromatico..."
+	Romanian = "Calculez polinomul cromatic..."
+	Spanish = "Calculando polinomio cromático..."
+	SwedishChef = "Cumpooteeng chrumeteec pulynumeeel..."
+};
+"Determining diameter..." = {
+	Catalan = "Calculando diàmetre..."
+	ChineseSimp = "求出直径..."
+	French = "Calcul du diamètre..."
+	German = "Bestimme Durchmesser..."
+	Italian = "Calcolando diametro..."
+	Romanian = "Calculez diametrul..."
+	Spanish = "Calculando diámetro..."
+	SwedishChef = "Determeening deeemeter..."
+};
+"Determining Eulericity..." = {
+	Catalan = "Comprobant eulericitat..."
+	ChineseSimp = "确定是否为欧拉图..."
+	French = "Vérification de l'eulericité..."
+	German = "Überprüfe, ob eulersch..."
+	Italian = "Determinando l'Eulericità..."
+	Romanian = "Determin Eulericitatea..."
+	Spanish = "Comprobando eulericidad..."
+	SwedishChef = "Determeening Ioolereecity..."
+};
+"Determining radius..." = {
+	Catalan = "Calculant radi..."
+	ChineseSimp = "求出半径..."
+	French = "Calcul du rayon..."
+	German = "Bestimme Radius..."
+	Italian = "Determinando il raggio..."
+	Romanian = "Determin raza..."
+	Spanish = "Calculando radio..."
+	SwedishChef = "Determeening redeeoos..."
+};
+"Finding shortest path..." = {
+	Catalan = "Cercant camí més curt..."
+	ChineseSimp = "找出最短路..."
+	French = "Recherche du plus court chemin..."
+	German = "Suche Kürzesten Weg..."
+	Italian = "Cercando il cammino minimo..."
+	Romanian = "Caut cel mai scurt drum..."
+	Spanish = "Buscando camino más corto..."
+	SwedishChef = "Feending shurtest pet..."
+};
+"Performing BFS..." = {
+	Catalan = "Cercant per amplada..."
+	ChineseSimp = "进行宽度优先搜索..."
+	French = "En cours : recherche en largeur d'abord..."
+	German = "Durchsuche mit BFS..."
+	Italian = "Ricerca in ampiezza..."
+	Romanian = "Caut în lãþime..."
+	Spanish = "Buscando por anchura..."
+	SwedishChef = "Perffurmeeng BFS..."
+};
+"Performing DFS..." = {
+	Catalan = "Cercant en profunditat..."
+	ChineseSimp = "进行深度优先搜索..."
+	French = "En cours : recherche en profondeur d'abord..."
+	German = "Durchsuche mit DFS..."
+	Italian = "Ricerca in Profondità..."
+	Romanian = "Caut în adâncime..."
+	Spanish = "Buscando en profundidad..."
+	SwedishChef = "Perffurmeeng DFS..."
+};
+"Finding Minimum Spanning Tree..." = {
+	Catalan = "Cercant arbre d'expansió mínim..."
+	ChineseSimp = "寻找最小生成树..."
+	French = "Recheche de l'enjambement d'arbre minimal..."
+	German = "Suche minimalen spannenden Baum..."
+	Italian = "Trova albero dei cammini minimo..."
+	Romanian = "Caut arborele minim de acoperire..."
+	Spanish = "Buscando árbol de expansión mínimo..."
+	SwedishChef = "Feending Meenimoom Spunneeng Tree-a..."
+};
+"Finding Maximum Flow..." = {
+	Catalan = "Cercant flux màxim..."
+	ChineseSimp = "寻找最大流..."
+	French = "Calcul du flux maximal..."
+	Italian = "Trova il Massimo Flusso..."
+ 	Romanian = "Caut fluxul maxim..."
+	Spanish = "Buscando flujo máximo..."
+	SwedishChef = "Feending Mexeemoom Floo..."
+};
+"Prefab" = "&Prefab" subst "&" / "";
+"Prefab..." = "Prefab" + "...";
+"Ready" = {
+	Catalan = "Fet"
+	ChineseSimp = "准备好了"
+	French = "Prêt"
+	German = "Fertig"
+	Italian = "Pronto"
+	Romanian = "Gata"
+	Spanish = "Listo"
+	SwedishChef = "Reedy"
+};
+"Ready." = "Ready" + ".";
+"(Vertex Mode)" = "(" + "Vertex Mode" + ")";
+"Vertex Mode" = {
+	Catalan = "Mode Vèrtex"
+	ChineseSimp = "顶点模式"
+	French = "Mode sommet"
+	German = "Vertex Modus"
+	Italian = "Modalità Vertice"
+	Romanian = "Mod Vârf"
+	Spanish = "Modo Vértice"
+	SwedishChef = "Fertex Mude-a"
+};
+"(Edge Mode)" = "(" + "Edge Mode" + ")";
+"Edge Mode" = {
+	Catalan = "Mode Aresta"
+	ChineseSimp = "边模式"
+	French = "Mode arête"
+	German = "Kanten Modus"
+	Italian = "Modalità Arco"
+	Romanian = "Mod Muchie"
+	Spanish = "Modo Arista"
+	SwedishChef = "Idge-a Mude-a"
+};
+"Ready " = "Ready" + " ";
+"Ready (Vertex Mode)." = "Ready " + "(Vertex Mode)" + ".";
+"Ready (Edge Mode)." = "Ready " + "(Edge Mode)" + ".";
+
+"Change to Vertex Mode" = {
+	Catalan = "Canviar a mode vèrtex"
+	ChineseSimp = "转换到顶点模式"
+	French = "Changer pour le mode sommet"
+	German = "Wechsele in den Knoten Modus"
+	Italian = "Cambia a Modalità Vertice"
+	Romanian = "Schimbã în Mod Vârf"
+	Spanish = "Cambiar a modo vértice"
+	SwedishChef = "Chunge-a tu Fertex Mude-a"
+};
+"Change to Edge Mode" = {
+	Catalan = "Canviar a mode aresta"
+	ChineseSimp = "转换到边模式"
+	French = "Changer pour le mode arête"
+	German = "Wechsele in den Vertex Modus"
+	Italian = "Cambia a Modalità Arco"
+	Romanian = "Schimbã în Mod Muchie"
+	Spanish = "Cambiar a modo arista"
+	SwedishChef = "Chunge-a tu Idge-a Mude-a"
+};
+
+"Testing connectivity..." = {
+	Catalan = "Comprovant si és connex..."
+	ChineseSimp = "测试连通性..."
+	French = "Test de connexité..."
+	German = "Überprüfe Verbindung..."
+	Italian = "Provando la convessità..."
+	Romanian = "Testez conectivitatea..."
+	Spanish = "Comprobando si es conexo..."
+	SwedishChef = "Testeeng cunnecteefity..."
+};
+
+#------------------------- Literals -------------------------#
+
+"." = literal;
+"..." = literal;
+" " = literal;
+" (" = literal;
+"(" = literal;
+")" = literal;

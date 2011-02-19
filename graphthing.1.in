@@ -1,0 +1,25 @@
+.TH GraphThing 1 Version\ @PACKAGE_VERSION@
+.SH NAME
+GraphThing - graph creation, manipulation and study tool
+.SH SYNOPSIS
+.B "graphthing"
+[\fIfile\fP]
+.SH DESCRIPTION
+.PP
+.I GraphThing
+is a tool that allows you to create, manipulate and study graphs. These
+"graphs" are mathematical objects that describe relationships between sets;
+they are not 2D plots, charts, or anything similar to that.
+.SH OPTIONS
+.PP
+.TP 8
+.B "\fIfile\fP"
+This argument allows the user to specify a file to load automatically.
+.SH ENVIRONMENT
+.PP
+.TP 8
+.B LANGUAGE LC_ALL LANG
+Specify a localisation. These variables are tested in this order; the first
+one to contain a known localisation is taken.
+.SH AUTHORS
+David Symonds <dsymonds@gmail.com>
