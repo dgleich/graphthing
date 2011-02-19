@@ -1,0 +1,9 @@
+src/*.o
+src/graphthing
+src/config.h
+src/*.tab.hh
+GNUmakefile
+config.log
+config.status
+src/GNUmakefile
+graphthing.1

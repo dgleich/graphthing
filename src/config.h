@@ -10,15 +10,15 @@
 #define GT_VERSION "1.3.2"
 
 // was --with-dev passed to configure script?
-#define GT_WITH_DEV 1
+/* #undef GT_WITH_DEV */
 
 // NLS stuff
 #define ENABLE_NLS 1
 #define LANG_DIALOG_IS_DISABLED 1
 
 // System type
-/* #undef USING_LINUX */
+#define USING_LINUX 1
 /* #undef USING_FREEBSD */
-#define USING_OSX 1
+/* #undef USING_OSX */
 
 #endif	// __CONFIG_H__
