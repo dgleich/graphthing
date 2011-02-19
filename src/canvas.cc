@@ -275,6 +275,7 @@ Canvas::Canvas (GTFrame *gui, Graph **g)
 		gui (gui), gg (g)
 {
 	vertex_mode = true;
+    edge_mode_dir = false;
 	do_labels = true;
 	do_weights = do_flows = false;
 
@@ -465,7 +466,7 @@ void Canvas::OnClick (wxMouseEvent &event)
 		}
 		if (!g->are_adjacent (valt, v)) {
 			gui->undoableAction (_("Add edge"));
-			g->add (new Edge (valt, v));
+			g->add (new Edge (valt, v, edge_mode_dir));
 		}
 		g->unselect_all ();
 		g->select (v);
@@ -557,9 +558,13 @@ void Canvas::setVertexMode (bool v_mode)
 	vertex_mode = v_mode;
 }
 
-void Canvas::setEdgeMode ()
+/** Change the canvas to edge mode and set edge type as directed/undirected
+ * @param dir true if the edges are directed, false otherwise
+ */
+void Canvas::setEdgeMode (bool dir)
 {
 	vertex_mode = false;
+    edge_mode_dir = dir;
 }
 
 void Canvas::setParam (bool labels, bool weights, bool flows)

@@ -97,6 +97,7 @@ BEGIN_EVENT_TABLE(GTFrame, wxFrame)
 
 	EVT_TOOL	(ID_TOOL_VERTEXMODE,	GTFrame::cb_Change_Mode)
 	EVT_TOOL	(ID_TOOL_EDGEMODE,	GTFrame::cb_Change_Mode)
+    EVT_TOOL	(ID_TOOL_DIREDGEMODE,	GTFrame::cb_Change_Mode)
 END_EVENT_TABLE()
 
 wxMenuBar *GTFrame::genMenuBar ()
@@ -308,8 +309,10 @@ GTFrame::GTFrame ()
 	wxBitmap *ePix = new wxBitmap (edge_mode_xpm);
 	tb->AddRadioTool (ID_TOOL_VERTEXMODE, _("Vertex Mode"), *vPix, *vPix,
 					_("Change to Vertex Mode"));
-	tb->AddRadioTool (ID_TOOL_EDGEMODE, _("Edge Mode"), *ePix, *ePix,
-					_("Change to Edge Mode"));
+	tb->AddRadioTool (ID_TOOL_EDGEMODE, _("Undirected Edge Mode"), *ePix, *ePix,
+					_("Change to Undirected Edge Mode"));
+    tb->AddRadioTool (ID_TOOL_DIREDGEMODE, _("Directed Edge Mode"), *ePix, *ePix,
+					_("Change to Directed Edge Mode"));
 	tb->Realize ();
 
 	canvas = new Canvas (this, &graph);

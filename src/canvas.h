@@ -30,6 +30,7 @@ private:
 	GTFrame *gui;
 	Graph **gg;
 	bool vertex_mode;
+    bool edge_mode_dir;
 	bool do_labels, do_weights, do_flows;
 
 	std::vector<wxColour> selection_colours;
@@ -58,7 +59,7 @@ public:
 
 	void redraw ();
 	void setVertexMode (bool v_mode = true);
-	void setEdgeMode ();
+	void setEdgeMode (bool dir);
 	void setParam (bool labels, bool weights, bool flows);
 };
 

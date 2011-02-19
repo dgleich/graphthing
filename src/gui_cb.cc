@@ -810,13 +810,20 @@ void GTFrame::cb_Change_Mode (wxCommandEvent &event)
 {
 	popStatus ();
 
-	in_vertex_mode = (event.GetId() == ID_TOOL_VERTEXMODE);
-	canvas->setVertexMode (in_vertex_mode);
-
-	if (in_vertex_mode)
-		pushStatus (_("Ready (Vertex Mode)."));
-	else
-		pushStatus (_("Ready (Edge Mode)."));
+    if (event.GetId() == ID_TOOL_VERTEXMODE) {
+        edit_mode = EDIT_MODE_VERTEX;
+        canvas->setVertexMode (true); // set vertex mode (true = on)
+        pushStatus (_("Ready (Vertex Mode)."));
+    } else if (event.GetId() == ID_TOOL_EDGEMODE) {
+        edit_mode = EDIT_MODE_UNDIR_EDGE;
+        canvas->setEdgeMode (false); // undirected edges
+        pushStatus (_("Ready (Undirected Edge Mode)."));
+    } else if (event.GetId() == ID_TOOL_DIREDGEMODE) {
+        edit_mode = EDIT_MODE_DIR_EDGE;
+        canvas->setEdgeMode (true); // directed edges
+        pushStatus (_("Ready (Directed Edge Mode)."));
+    }
+        
 
 
 	// TODO: depress the correct buttons (mainly for keyboard mode switches)

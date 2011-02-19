@@ -94,7 +94,8 @@ private:
 	CB(cb_Help_About)
 
 	// Split mode
-	bool in_vertex_mode;
+	enum {EDIT_MODE_VERTEX=0, 
+        EDIT_MODE_UNDIR_EDGE, EDIT_MODE_DIR_EDGE, EDIT_MODE_END} edit_mode;
 	CB(cb_Change_Mode)
 
 
@@ -187,7 +188,8 @@ enum {
 
 	// Toolbar
 	ID_TOOL_VERTEXMODE,
-	ID_TOOL_EDGEMODE
+	ID_TOOL_EDGEMODE,
+    ID_TOOL_DIREDGEMODE
 };
 
 #endif	// __GUI_H__
