@@ -1,0 +1,15 @@
+info {
+	title = "Digraph test"
+}
+
+vertex "A" at (249,54)
+vertex "B" at (351,129)
+vertex "C" at (312,250)
+vertex "D" at (185,250)
+vertex "E" at (146,129)
+
+edge "A" -> "B"
+edge "B" -> "A"
+edge "B" -> "C"
+edge "C" -> "D"
+edge "D" -> "E"
